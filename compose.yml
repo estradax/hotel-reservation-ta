@@ -1,0 +1,8 @@
+services:
+  db:
+    image: mariadb
+    environment:
+      MARIADB_DATABASE: ${DB_DATABASE}
+      MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 3306:3306
