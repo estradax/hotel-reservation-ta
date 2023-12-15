@@ -1,6 +1,6 @@
 object FMasterData: TFMasterData
-  Left = 335
-  Top = 286
+  Left = 472
+  Top = 421
   Width = 1305
   Height = 675
   Caption = 'Master Data'

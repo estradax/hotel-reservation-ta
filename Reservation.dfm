@@ -1,6 +1,6 @@
 object FReservation: TFReservation
-  Left = 437
-  Top = 257
+  Left = 387
+  Top = 279
   Width = 1305
   Height = 675
   Caption = 'Hotel Reservation'
@@ -142,6 +142,7 @@ object FReservation: TFReservation
   end
   object ZQueryAvailableRoom: TZQuery
     Connection = FDataModule.ZConnection
+    Active = True
     ReadOnly = True
     SQL.Strings = (
       'select * from rooms where id not in ('
