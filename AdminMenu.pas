@@ -11,8 +11,10 @@ type
     Label1: TLabel;
     ButtonAdminReservation: TButton;
     ButtonMasterData: TButton;
+    ButtonCheckout: TButton;
     procedure ButtonAdminReservationClick(Sender: TObject);
     procedure ButtonMasterDataClick(Sender: TObject);
+    procedure ButtonCheckoutClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,7 +26,7 @@ var
 
 implementation
 
-uses Reservation, MasterData;
+uses Reservation, MasterData, Checkout;
 
 {$R *.dfm}
 
@@ -36,6 +38,11 @@ end;
 procedure TFAdminMenu.ButtonMasterDataClick(Sender: TObject);
 begin
   FMasterData.Show;
+end;
+
+procedure TFAdminMenu.ButtonCheckoutClick(Sender: TObject);
+begin
+  FCheckout.Show;
 end;
 
 end.

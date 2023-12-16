@@ -1,6 +1,6 @@
 object FReservation: TFReservation
-  Left = 387
-  Top = 279
+  Left = 455
+  Top = 409
   Width = 1305
   Height = 675
   Caption = 'Hotel Reservation'

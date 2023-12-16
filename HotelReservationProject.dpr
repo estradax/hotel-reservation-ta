@@ -6,7 +6,8 @@ uses
   DataModule in 'DataModule.pas' {FDataModule: TDataModule},
   AdminMenu in 'AdminMenu.pas' {FAdminMenu},
   Reservation in 'Reservation.pas' {FReservation},
-  MasterData in 'MasterData.pas' {FMasterData};
+  MasterData in 'MasterData.pas' {FMasterData},
+  Checkout in 'Checkout.pas' {FCheckout};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.CreateForm(TFAdminMenu, FAdminMenu);
   Application.CreateForm(TFReservation, FReservation);
   Application.CreateForm(TFMasterData, FMasterData);
+  Application.CreateForm(TFCheckout, FCheckout);
   Application.Run;
 end.

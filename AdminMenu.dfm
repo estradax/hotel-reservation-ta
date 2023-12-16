@@ -1,6 +1,6 @@
 object FAdminMenu: TFAdminMenu
-  Left = 599
-  Top = 346
+  Left = 658
+  Top = 387
   Width = 337
   Height = 398
   Caption = 'Admin Menu'
@@ -43,5 +43,14 @@ object FAdminMenu: TFAdminMenu
     Caption = 'Master Data'
     TabOrder = 1
     OnClick = ButtonMasterDataClick
+  end
+  object ButtonCheckout: TButton
+    Left = 96
+    Top = 152
+    Width = 137
+    Height = 25
+    Caption = 'Check Out'
+    TabOrder = 2
+    OnClick = ButtonCheckoutClick
   end
 end
