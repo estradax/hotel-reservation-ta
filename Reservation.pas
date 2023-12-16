@@ -22,6 +22,7 @@ type
     ZQueryAvailableRoom: TZQuery;
     DataSourceAvailableRoom: TDataSource;
     ZQueryReserve: TZQuery;
+    ButtonRefresh: TButton;
 
     function IsEmailValid(): boolean;
 
@@ -34,6 +35,7 @@ type
     procedure CreateReservation(UserID, RoomID, DayCount: Integer);
 
     procedure ButtonSubmitClick(Sender: TObject);
+    procedure ButtonRefreshClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +46,8 @@ var
   FReservation: TFReservation;
 
 implementation
+
+uses DataModule;
 
 {$R *.dfm}
 
@@ -189,7 +193,21 @@ begin
 
   CreateReservation(UserID, RoomID, StrToInt(EditDayCount.Text));
 
+  ZQueryReserve.Close;
+
+  ZQueryReserve.Sql.Clear;
+  ZQueryReserve.Sql.Add('SELECT * FROM reservations ORDER BY created_at DESC');
+
+  ZQueryReserve.Open;
+
+  ShowMessage('Reservation ID: ' + ZQueryReserve.FieldByName('id').AsString);
+
 Return:
+end;
+
+procedure TFReservation.ButtonRefreshClick(Sender: TObject);
+begin
+  ZQueryAvailableRoom.Refresh;
 end;
 
 end.

@@ -1,5 +1,5 @@
 object FReservation: TFReservation
-  Left = 455
+  Left = 399
   Top = 409
   Width = 1305
   Height = 675
@@ -139,6 +139,15 @@ object FReservation: TFReservation
     WidthOfIndicator = 11
     DefaultRowHeight = 16
     ScrollBars = ssHorizontal
+  end
+  object ButtonRefresh: TButton
+    Left = 680
+    Top = 288
+    Width = 75
+    Height = 25
+    Caption = 'Refresh'
+    TabOrder = 5
+    OnClick = ButtonRefreshClick
   end
   object ZQueryAvailableRoom: TZQuery
     Connection = FDataModule.ZConnection
